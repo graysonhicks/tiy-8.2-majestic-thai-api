@@ -212,6 +212,47 @@ Sutros is a simple restaurant menu and ordering system.
         ]
         }
 
+## Order Item [/orders/{custname}]
+
++ Parameters
+    + custname (string) - Name of customer on order
+
+### Order Item [GET]
+
++ Response 200 (application/json)
+
+            {
+            "orders": [
+            {
+            "_id": "56f00d6d781505030005d6b0",
+            "customer": {
+              "ccnumber": "",
+              "cvcnumber": "",
+              "delivery": "true",
+              "expmonth": "",
+              "expyear": "",
+              "name": "Wesley Snipes",
+              "totalPrice": 71.84
+            },
+            "dishes": [
+              {
+              "dish": "Sukho Thai Dumplings",
+              "price": 10.95
+              }, {
+              "dish": "Chicken or Shrimp Satay",
+              "price": 8.95
+              }, {
+              "dish": "Three Flavor Whole Fish w/ Shrimp and Scallops",
+              "price": 21.99
+              }, {
+              "dish": "Royal Basil Duck",
+              "price": 29.95
+              }
+            ]
+          }
+          ]
+        }
+
 ### New Order [POST]
 
 + Request (application/json)
